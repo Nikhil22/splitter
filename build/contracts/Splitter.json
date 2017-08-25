@@ -1,0 +1,222 @@
+{
+  "contract_name": "Splitter",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "withdrawFunds",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "balances",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "recipientOne",
+          "type": "address"
+        },
+        {
+          "name": "recipientTwo",
+          "type": "address"
+        }
+      ],
+      "name": "sendMoney",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": true,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "recipientOne",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "recipientTwo",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogMoneyTransfer",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "LogMoneyWithdrawal",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x60606040525b60008054600160a060020a03191633600160a060020a03161790555b5b6102f2806100316000396000f300606060405263ffffffff60e060020a60003504166324600fc3811461004257806327e235e31461006657806341c0e1b5146100945780635830928c146100b8575bfe5b341561004a57fe5b6100526100e6565b604080519115158252519081900360200190f35b341561006e57fe5b610082600160a060020a03600435166101a9565b60408051918252519081900360200190f35b341561009c57fe5b6100526101bb565b604080519115158252519081900360200190f35b610052600160a060020a03600435811690602435166101e9565b604080519115158252519081900360200190f35b600160a060020a033316600090815260016020526040812054819081901161010e5760006000fd5b50600160a060020a03331660008181526001602052604080822054905190929183156108fc02918491818181858888f19350505050151561014b57fe5b600160a060020a0333166000818152600160209081526040808320929092558151928352820183905280517f714741d14727486ad41076ddd97cfe4aa3fa613232f2995e92052607fb7f36629281900390910190a1600191505b5090565b60016020526000908152604090205481565b6000805433600160a060020a039081169116146101d85760006000fd5b600054600160a060020a0316ff5b90565b60008080348190116101fb5760006000fd5b349150816001166001141561023457600160a060020a033316600090815260016020819052604090912080549091019055600019909101905b6002825b600160a060020a038088166000818152600160209081526040808320805497909604968701909555898416808352918590208054870190558451339094168452830191909152818301526060810183905290519192507f9546839e5d07773af3a53837d5e0cd3dcf7864167db574df8f5e0e352a7ea40f919081900360800190a1600192505b5050929150505600a165627a7a72305820d64eb76f09514bb20783f1d44c3a26431f4eff60283c82468f3a30cebec1b8920029",
+  "networks": {
+    "1503689197725": {
+      "events": {
+        "0x9546839e5d07773af3a53837d5e0cd3dcf7864167db574df8f5e0e352a7ea40f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "recipientOne",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "recipientTwo",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogMoneyTransfer",
+          "type": "event"
+        },
+        "0x714741d14727486ad41076ddd97cfe4aa3fa613232f2995e92052607fb7f3662": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogMoneyWithdrawal",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xbc1ce9438a4b16c1d37111d230c57e3e7aa40afb",
+      "updated_at": 1503689250761
+    },
+    "1503690045186": {
+      "events": {
+        "0x9546839e5d07773af3a53837d5e0cd3dcf7864167db574df8f5e0e352a7ea40f": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "recipientOne",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "recipientTwo",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogMoneyTransfer",
+          "type": "event"
+        },
+        "0x714741d14727486ad41076ddd97cfe4aa3fa613232f2995e92052607fb7f3662": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "sender",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "amount",
+              "type": "uint256"
+            }
+          ],
+          "name": "LogMoneyWithdrawal",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xa7daa3198fb8243e7828171398ad0590202196dc",
+      "updated_at": 1503690056082
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1503690056082
+}
