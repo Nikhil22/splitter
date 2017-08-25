@@ -56,16 +56,16 @@ contract Splitter is Owned {
           return true;
     }
 
-		function withdrawFunds()
-			public
-			returns (bool success) {
-				require(balances[msg.sender] > 0);
-				uint balance = balances[msg.sender];
-				msg.sender.transfer(balance);
-				balances[msg.sender] = 0;
-				LogMoneyWithdrawal(msg.sender, balance);
-				return true;
-		}
+    function withdrawFunds()
+    	public
+    	returns (bool success) {
+    		require(balances[msg.sender] > 0);
+    		uint balance = balances[msg.sender];
+    		msg.sender.transfer(balance);
+    		balances[msg.sender] = 0;
+    		LogMoneyWithdrawal(msg.sender, balance);
+    		return true;
+    }
 
     function kill() returns (bool success) {
         require(msg.sender == owner);
