@@ -61,8 +61,8 @@ contract Splitter is Owned {
     	returns (bool success) {
     		require(balances[msg.sender] > 0);
     		uint balance = balances[msg.sender];
+        balances[msg.sender] = 0;
     		msg.sender.transfer(balance);
-    		balances[msg.sender] = 0;
     		LogMoneyWithdrawal(msg.sender, balance);
     		return true;
     }
