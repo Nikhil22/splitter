@@ -20,10 +20,10 @@ contract Splitter is Owned {
         uint amount
     );
 
-		event LogMoneyWithdrawal(
-				address sender,
-				uint amount
-		);
+    event LogMoneyWithdrawal(
+    		address sender,
+    		uint amount
+    );
 
     function sendMoney(address recipientOne, address recipientTwo)
         public
