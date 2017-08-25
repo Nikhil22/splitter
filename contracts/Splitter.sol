@@ -63,8 +63,8 @@ contract Splitter is Owned {
         uint balance = balances[msg.sender];
         balances[msg.sender] = 0;
     		msg.sender.transfer(balance);
-    		LogMoneyWithdrawal(msg.sender, balance);
-    		return true;
+        LogMoneyWithdrawal(msg.sender, balance);
+        return true;
     }
 
     function kill() returns (bool success) {
