@@ -1,13 +1,6 @@
-pragma solidity ^0.4.6;
+pragma solidity ^0.4.10;
 
-contract Owned {
-
-    address owner;
-
-    function Owned() {
-      owner = msg.sender;
-    }
-}
+import './Owned.sol';
 
 contract Splitter is Owned {
 
@@ -32,6 +25,8 @@ contract Splitter is Owned {
 
           /* require a positive amount */
           require(msg.value > 0);
+          require(recipientOne != 0);
+          require(recipientTwo != 0);
 
           uint totalSenderAmount = msg.value;
 
